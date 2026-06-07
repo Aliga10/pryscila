@@ -13,6 +13,9 @@
                 <a href="/" class="hover:underline">Home</a>
             </li>
             <li>
+                <a href="/products" class="hover:underline">Products</a>
+            </li>   
+            <li>
                 <a href="/about" class="hover:underline">About</a>
             </li>
             <li>
