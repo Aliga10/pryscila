@@ -1,12 +1,24 @@
 <script lang="ts">
     import Logo from "$lib/assets/logoText.svg";
+    import LogoDark from "$lib/assets/logoText-dark.svg";
     import { Button } from "$lib/components/ui/button/index.js";
+    import ThemeToggle from "$lib/components/ui/themeToggle/themeToggle.svelte";
 </script>
 
-<header class="  bg-white text-black p-2 shadow-sm">
+<header class="bg-background text-foreground p-2 shadow-sm">
     <div class="mx-4 flex items-center">
         <div>
-            <img src={Logo} alt="Logo" class="h-6" />
+            <img 
+                src={Logo} 
+                alt="Logo" 
+                class="h-6 block dark:hidden" 
+            />
+
+            <img 
+                src={LogoDark} 
+                alt="Logo" 
+                class="h-6 hidden dark:block" 
+            />
         </div>
         <ul class="mx-auto flex space-x-8">
             <li>
@@ -22,6 +34,9 @@
                 <a href="/contact" class="hover:underline">Contact</a>
             </li>
         </ul>
+        <div>
+            <ThemeToggle />
+        </div>
         <div>
             <Button variant="outline" class="mr-2">
                 <a href="/signup">Sign Up</a>
